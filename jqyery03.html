@@ -20,23 +20,33 @@
                 margin: 10px;
             }
             
+            
         </style>
         
     </head>
     <body>
         
         <div id="circle"></div>
-        <div class="square"></div>
+        
         <div class="square"></div>
         
+        <div class="square"></div>
+                
         <script type="text/javascript">
-           $("#circle").click(function(){
-              alert("circle was clicked") ;
-            
-           });
-            $(".square").click(function(){
-                alert("one of the squares was clicked"); 
+           
+            $("#circle").click(function(){
+               alert($("body").css("width"));
             });
+            
+            $("div").click(function(){
+                if($(this).attr("id") == "circle"){
+                    alert("You clicked on a circle")   ;
+                }
+                else{
+                    alert("You clicked on a square");
+                }
+            });
+            
         </script>
     </body>
     
